@@ -1,0 +1,10 @@
+type PaxAccountV1_Initialized {
+  id: ID!
+  version: BigInt!
+}
+
+type PaxAccountV1_PaxAccountCreated {
+  id: ID!
+  paxAccount: String!
+}
+

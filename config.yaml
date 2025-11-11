@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=./node_modules/envio/evm.schema.json
+name: envio-indexer
+networks:
+- id: 42220
+  start_block: 0
+  contracts:
+  - name: PaxAccountV1
+    address:
+    - 0xD9Ae701950bB2615b9a068C6a310156af6AD92A2
+    handler: src/EventHandlers.ts
+    events:
+    - event: Initialized(uint64 version)
+    - event: PaxAccountCreated(address indexed paxAccount)
+unordered_multichain_mode: true
+preload_handlers: true
